@@ -16,6 +16,10 @@ connect-src 'self' https: wss://mc.yandex.com;
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preload" as="image" href="/images/header.webp" fetchpriority="high">
+<link rel="preconnect" href="https://mc.yandex.ru" crossorigin>
+<link rel="preconnect" href="https://n1307940.yclients.com" crossorigin>
+<link rel="dns-prefetch" href="//vk.com">
 <!-- PWA -->
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#254024">
@@ -1903,7 +1907,7 @@ connect-src 'self' https: wss://mc.yandex.com;
     <nav class="navbar">
         <div class="nav-inner">
             <a href="#hero" class="logo">
-                <img src="logo.png" alt="Салон красоты Best For You в Воронеже">
+                <img src="logo.png" alt="Салон красоты Best For You в Воронеже" width="180" height="45" decoding="async" fetchpriority="high">
                 Best For You
             </a>
             <div class="nav-right">
@@ -2170,7 +2174,7 @@ connect-src 'self' https: wss://mc.yandex.com;
         <div class="yclients-close" onclick="closeYclients()">×</div>
 
         <div class="modal-content">
-            <iframe src="https://n1307940.yclients.com/widget"></iframe>
+            <iframe data-src="https://n1307940.yclients.com/widget" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Онлайн-запись в салон Best For You"></iframe>
         </div>
     </div>
 
@@ -2523,8 +2527,18 @@ document.addEventListener('keydown', e => {
     }
 });</script>
 
-    <script>function openYclients() {
-        document.getElementById('yclientsModal').classList.add('active');
+    <script>let yclientsLoaded = false;
+    function openYclients() {
+        const modal = document.getElementById('yclientsModal');
+        if (!yclientsLoaded) {
+            const frame = modal.querySelector('iframe[data-src]');
+            if (frame) {
+                frame.src = frame.dataset.src;
+                yclientsLoaded = true;
+            }
+        }
+
+        modal.classList.add('active');
         document.querySelector('.floating-booking-btn')?.classList.add('hidden');
         lockScroll();
     }
@@ -2859,7 +2873,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadVkFeed(); // первый запуск
 
     setInterval(() => {
-        loadVkFeed(); // автообновление
+        if (document.visibilityState === 'visible') {
+            loadVkFeed(); // автообновление только в активной вкладке
+        }
     }, 300000); // 5 минут
 });
 </script>
