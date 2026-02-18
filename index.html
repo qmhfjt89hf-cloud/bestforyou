@@ -24,9 +24,6 @@ connect-src 'self' https: wss://mc.yandex.com;
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#254024">
 
-    <!-- Android / Chrome -->
-    <meta name="theme-color" content="#254024">
-
 <!-- iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Best For You">
@@ -81,6 +78,24 @@ connect-src 'self' https: wss://mc.yandex.com;
 
     <title>Салон красоты в Воронеже — стрижки, окрашивание | Best For You</title>
     <meta name="description" content="Салон красоты Best For You в Воронеже. Женские и мужские стрижки, окрашивание, уход за волосами, макияж. Онлайн-запись.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="googlebot" content="index,follow,max-image-preview:large">
+    <meta name="yandex" content="index,follow">
+    <meta name="geo.region" content="RU-VOR">
+    <meta name="geo.placename" content="Воронеж">
+    <meta name="geo.position" content="51.686194;39.184423">
+    <meta name="ICBM" content="51.686194, 39.184423">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Салон красоты в Воронеже — стрижки, окрашивание | Best For You">
+    <meta property="og:description" content="Женские и мужские стрижки, окрашивание, уход и онлайн-запись в салон красоты Best For You в Воронеже.">
+    <meta property="og:url" content="https://best-4-you.ru/">
+    <meta property="og:image" content="https://best-4-you.ru/images/header.webp">
+    <meta property="og:site_name" content="Best For You">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Best For You — салон красоты в Воронеже">
+    <meta name="twitter:description" content="Стрижки, окрашивание, уход за волосами и онлайн-запись в Best For You.">
+    <meta name="twitter:image" content="https://best-4-you.ru/images/header.webp">
 
     <style>
         :root {
@@ -407,7 +422,6 @@ connect-src 'self' https: wss://mc.yandex.com;
             width: 100%;
             margin-top: 0;
             cursor: grab;
-            margin-top: 0;
         }
 
         .reviews-viewport {
@@ -537,7 +551,6 @@ connect-src 'self' https: wss://mc.yandex.com;
 
             .team-card::after {
                 content: "📸 Работы мастера";
-                font-size: 18px;
                 position: absolute;
                 inset: 0;
                 background: rgba(0,0,0,0.35);
@@ -672,14 +685,6 @@ connect-src 'self' https: wss://mc.yandex.com;
                 transform: scale(1.1);
                 box-shadow: 0 14px 30px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,1);
             }
-        /* ===== YCLIENTS IFRAME ===== */
-        #yclientsModal iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            background: #fff;
-        }
-
         /* ===== APPLE PHOTOS AUTO GRID ===== */
         #modal .modal-grid {
             height: 100%;
@@ -1122,14 +1127,13 @@ connect-src 'self' https: wss://mc.yandex.com;
             height: 56px;
             padding: 0;
             border-radius: 50%;
-            background-color: rgba(255,255,255,0.65);
+            background-color: #fff;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6);
             background-repeat: no-repeat;
             background-position: center;
             background-size: 26px 26px;
             transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
-            background-color: #fff;
         }
 
             .icon-btn:hover {
@@ -1870,6 +1874,20 @@ connect-src 'self' https: wss://mc.yandex.com;
           ]
         }
     </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Best For You",
+          "url": "https://best-4-you.ru/",
+          "inLanguage": "ru-RU",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://best-4-you.ru/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+    </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">(function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -1970,7 +1988,7 @@ connect-src 'self' https: wss://mc.yandex.com;
 
     </nav>
 
-    <header id="hero">
+    <header id="hero" itemscope itemtype="https://schema.org/WPHeader">
         <div class="hero">
             <h1>Салон красоты в Воронеже Best For You</h1>
             <p>Индивидуальный подход, стиль и забота о вашей красоте</p>
@@ -1978,6 +1996,7 @@ connect-src 'self' https: wss://mc.yandex.com;
         </div>
     </header>
 
+    <main id="content" itemscope itemtype="https://schema.org/WebPage">
     <section id="about">
         <h2>О салоне</h2>
         <p>
@@ -2138,6 +2157,8 @@ connect-src 'self' https: wss://mc.yandex.com;
         </div>
     </section>
 
+    </main>
+
     <footer id="contacts" itemscope itemtype="https://schema.org/BeautySalon">
         <div class="contacts-box">
             <div class="contacts-info">
@@ -2152,8 +2173,8 @@ connect-src 'self' https: wss://mc.yandex.com;
 
             <div class="contacts-socials">
                 <a href="https://vk.com/b_f_u" aria-label="ВКонтакте" rel="noopener"><svg class="icon"><use href="#icon-vk"></use></svg></a>
-                <a href="https://t.me/stasik958" aria-label="Telegram" rel="noopener"><svg class="icon"><use href="#icon-wa"></use></svg></a>
-                <a href="https://wa.me/79056596973" aria-label="WhatsApp" rel="noopener"><svg class="icon"><use href="#icon-tg"></use></svg></a>
+                <a href="https://t.me/stasik958" aria-label="Telegram" rel="noopener"><svg class="icon"><use href="#icon-tg"></use></svg></a>
+                <a href="https://wa.me/79056596973" aria-label="WhatsApp" rel="noopener"><svg class="icon"><use href="#icon-wa"></use></svg></a>
             </div>
         </div>
     </footer>
@@ -2644,7 +2665,7 @@ if (wrapper && reviewsTrack && !reviewsTrack.dataset.inited) {
     document.addEventListener('touchend', end);
 }</script>
 
-    <a href="javascript:void(0)"
+    <a href="#booking"
        class="floating-booking-btn"
        onclick="openYclients()"
        aria-label="Онлайн запись">
