@@ -1,0 +1,44 @@
+{
+  "id": "/",
+  "name": "Best For You — салон красоты в Воронеже",
+  "short_name": "Best For You",
+  "description": "Современный салон красоты Best For You в Воронеже. Стрижки, окрашивание, уход, макияж и онлайн-запись.",
+  "lang": "ru",
+
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+
+  "background_color": "#254024",
+  "theme_color": "#254024",
+
+  "categories": [ "beauty", "lifestyle", "health" ],
+
+  "icons": [
+    {
+      "src": "/splash/icon-light-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/splash/icon-light-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/splash/icon-dark-192.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/splash/icon-dark-512.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ]
+}

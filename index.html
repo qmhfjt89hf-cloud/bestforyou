@@ -1,0 +1,2868 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="canonical" href="https://best-4-you.ru/">
+    <meta http-equiv="Content-Security-Policy"
+      content="
+default-src 'self' https:;
+img-src 'self' https: data: blob:;
+media-src 'self' https: blob: data: vk.com *.vk.com *.vkuservideo.net *.vkuserlive.net;
+frame-src https://n1307940.yclients.com https://vk.com https://*.vk.com;
+script-src 'self' 'unsafe-inline' https:;
+style-src 'self' 'unsafe-inline' https:;
+connect-src 'self' https: wss://mc.yandex.com;
+">
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- PWA -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#254024">
+
+    <!-- Android / Chrome -->
+    <meta name="theme-color" content="#254024">
+
+<!-- iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Best For You">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Safari pinned tab -->
+<link rel="apple-touch-icon" href="/splash/icon-light-512.webp">
+<link rel="mask-icon" href="/splash/safari-pinned-tab.svg" color="#254024">
+
+    <!-- iOS Splash -->
+    <!-- iPhone 7 / 8 / SE (2,3 gen) -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-750x1334.webp"
+          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
+    <!-- iPhone 7 Plus / 8 Plus -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1242x2208.webp"
+          media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone X / XS / 11 Pro -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1125x2436.webp"
+          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone XR / 11 -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-828x1792.webp"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)">
+    <!-- iPhone XS Max / 11 Pro Max -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1242x2688.webp"
+          media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone 12 / 13 / 14 -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1170x2532.webp"
+          media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone 12 Pro / 13 Pro / 14 Pro / 15 / 15 Pro -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1179x2556.webp"
+          media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone 12 Pro Max / 13 Pro Max / 14 Plus -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1284x2778.webp"
+          media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone 15 Plus / 15 Pro Max -->
+    <link rel="apple-touch-startup-image"
+          href="/splash/splash-1290x2796.webp"
+          media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="favicon-16.webp">
+    <link rel="icon" type="image/webp" sizes="32x32" href="favicon-32.webp">
+    <link rel="icon" type="image/webp" sizes="48x48" href="favicon-48.webp">
+
+    <title>Салон красоты в Воронеже — стрижки, окрашивание | Best For You</title>
+    <meta name="description" content="Салон красоты Best For You в Воронеже. Женские и мужские стрижки, окрашивание, уход за волосами, макияж. Онлайн-запись.">
+
+    <style>
+        :root {
+            --green-dark: #2f5d4a;
+            --green-main: #4f7f6a;
+            --green-light: #e7f2ec;
+            --text-dark: #24352a;
+            --glass-bg: rgba(255,255,255,0.35);
+            --glass-border: rgba(255,255,255,0.45);
+            --accent: #f5c76b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter','Segoe UI',sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg,#eef5f0,#f8fbf9);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+            html.modal-open,
+            body.modal-open {
+                overflow: hidden;
+                height: 100%;
+                position: fixed;
+                width: 100%;
+            }
+
+        html {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+        /* ================= ANIMATIONS ================= */
+        @keyframes heroFade {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(255,255,255,.55);
+            backdrop-filter: blur(20px);
+            border-radius: 0 0 40px 40px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,.12);
+            z-index: 2000;
+            transition: top .45s ease, width .45s ease, border-radius .45s ease, box-shadow .45s ease, background .45s ease;
+        }
+
+            .navbar.scrolled {
+                top: 20px;
+                width: 90%;
+                border-radius: 60px;
+                background: rgba(255,255,255,.35);
+                box-shadow: 0 25px 60px rgba(0,0,0,.18);
+            }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 32px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            color: var(--green-dark);
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+            .logo img {
+                height: 45px;
+                width: auto;
+                filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+            }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--green-dark);
+            font-weight: 500;
+            position: relative;
+        }
+
+            .nav-links a::after {
+                content: '';
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: var(--green-dark);
+                transition: .3s;
+            }
+
+            .nav-links a:hover::after {
+                width: 100%;
+            }
+
+        .social-icons a {
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: rgba(255,255,255,.6);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--green-dark);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+            .social-icons a:hover {
+                transform: translateY(-2px);
+                background: rgba(255,255,255,.85);
+            }
+
+        /* ================= HERO ================= */
+        header {
+            min-height: 100vh;
+            background: linear-gradient(135deg,rgba(37,64,36,.20),rgba(37,64,36,.85)), url('images/header.webp') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            max-width: 820px;
+            padding: 60px 50px;
+            background: rgba(255,255,255,.15);
+            backdrop-filter: blur(14px);
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,.35);
+            animation: heroFade 1.4s ease;
+        }
+
+        header h1 {
+            font-size: 54px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 44px;
+            background: rgba(255,255,255,.9);
+            color: var(--green-dark);
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .4s ease;
+        }
+
+            .btn:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 20px 40px rgba(0,0,0,.25);
+            }
+
+        /* ================= SECTIONS ================= */
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px; /* было 120 */
+        }
+
+        #reviews-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px; /* ТАК ЖЕ, КАК У ВСЕХ */
+        }
+        /* ===== REVIEWS HEADER ALIGN (как у Команды) ===== */
+        .reviews-header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+            .reviews-header h2 {
+                font-size: 42px;
+                margin-bottom: 40px;
+                color: var(--green-dark);
+            }
+
+        .reviews-fullwidth {
+            width: 100vw;
+            margin-left: calc(50% - 50vw);
+        }
+        /* мягкое рассеивание без границ */
+
+        section h2 {
+            font-size: 42px;
+            margin-bottom: 40px;
+            color: var(--green-dark);
+        }
+
+        section p {
+            max-width: 900px;
+            font-size: 18px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(18px);
+            border-radius: 32px;
+            padding: 42px 38px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 30px 80px rgba(0,0,0,.1);
+            transition: .5s ease;
+            position: relative;
+        }
+
+            .card:hover {
+                transform: translateY(-14px) scale(1.02);
+                box-shadow: 0 45px 100px rgba(0,0,0,.16);
+            }
+
+            .card strong {
+                display: block;
+                font-size: 20px;
+                margin-bottom: 15px;
+                color: var(--green-dark);
+            }
+        /* ================= REVIEWS ================= */
+        .review-card {
+            min-width: 340px;
+            max-width: 340px;
+            background: var(--glass-bg);
+            border-radius: 28px;
+            padding: 32px 30px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 50px rgba(0,0,0,.12);
+            transition: transform .35s ease;
+            will-change: transform, box-shadow;
+            box-shadow: 0 24px 36px -12px rgba(0,0,0,.18), inset 0 0 0 1px rgba(255,255,255,.45);
+            height: 340px; /* ← выбери комфортную высоту */
+            display: flex;
+            flex-direction: column;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            .review-card:hover {
+                transform: translateY(-6px);
+            }
+
+            .review-card p {
+                font-size: 16px;
+                margin-bottom: 18px;
+                overflow-y: auto;
+                flex: 1;
+                padding-right: 6px;
+            }
+                /* Chrome / Safari / Edge */
+                .review-card p::-webkit-scrollbar {
+                    width: 0;
+                    height: 0;
+                }
+
+            /* Firefox */
+            .review-card p {
+                scrollbar-width: none;
+            }
+
+            /* IE / старый Edge */
+            .review-card p {
+                -ms-overflow-style: none;
+            }
+
+            .review-card strong {
+                color: var(--green-dark);
+                font-weight: 600;
+            }
+
+        .reviews-wrapper {
+            overflow: visible;
+            position: relative;
+            width: 100%;
+            margin-top: 0;
+            cursor: grab;
+            margin-top: 0;
+        }
+
+        .reviews-viewport {
+            overflow: visible;
+            width: 100%;
+            padding: 16px 0 40px;
+            position: relative;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .reviews-wrapper:active {
+            cursor: grabbing;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 32px;
+            width: max-content;
+            will-change: transform;
+            position: relative;
+            z-index: 1;
+            transform: translateZ(0);
+        }
+
+        .review-stars {
+            color: var(--accent);
+            font-size: 18px;
+            margin-bottom: 14px;
+        }
+
+        /* mobile */
+        @media(max-width:768px) {
+            .review-card {
+                min-width: 280px;
+                max-width: 280px;
+            }
+            section {
+                padding: 50px 16px;
+            }
+        }
+
+        /* ================= PROMO BADGES ================= */
+        .badge {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+            .badge.sale {
+                background: #f5c76b;
+                color: #2f5d4a;
+            }
+
+            .badge.hit {
+                background: #d94f4f;
+            }
+
+            .badge.gift {
+                background: #4f7f6a;
+            }
+
+        /* ================= ABOUT SLIDER ================= */
+        .about-slider {
+            margin-top: 60px;
+            position: relative;
+            height: 420px;
+            border-radius: 32px;
+            overflow: hidden;
+            background: #e7f2ec;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: rgba(0,0,0,.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            color: #fff;
+            cursor: pointer;
+            transition: .3s ease;
+            z-index: 10;
+        }
+
+            .slider-arrow:hover {
+                background: rgba(0,0,0,.55);
+                transform: translateY(-50%) scale(1.08);
+            }
+
+            .slider-arrow.left {
+                left: 20px;
+            }
+
+            .slider-arrow.right {
+                right: 20px;
+            }
+
+        /* ================= TEAM ================= */
+        .team-card {
+            padding: 0;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+            .team-card img {
+                width: 100%;
+                height: 360px;
+                object-fit: cover;
+                transition: .7s;
+            }
+
+            .team-card:hover img {
+                transform: scale(1.1);
+            }
+
+            .team-card::after {
+                content: "📸 Работы мастера";
+                font-size: 18px;
+                position: absolute;
+                inset: 0;
+                background: rgba(0,0,0,0.35);
+                backdrop-filter: blur(4px);
+                color: #fff;
+                font-weight: 600;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: opacity .35s ease;
+            }
+
+            .team-card:hover::after {
+                opacity: 1;
+            }
+
+        .team-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,rgba(0,0,0,.55),transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 26px;
+        }
+
+        .team-name {
+            background: rgba(255,255,255,.15);
+            backdrop-filter: blur(6px);
+            border-radius: 16px;
+            padding: 12px 16px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* ================= MODALS ================= */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(20, 30, 25, 0.35);
+            backdrop-filter: blur(6px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 4000;
+        }
+
+            .modal.active {
+                display: flex;
+            }
+        /* ===== TEAM MODAL FIXED SIZE ===== */
+        #modal .modal-content {
+            position: relative;
+            width: 92%;
+            max-width: 900px;
+            height: 80vh;
+            padding: 32px 28px 28px;
+            background: rgba(255,255,255,0.45); /* 🔑 ПРОЗРАЧНО */
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-radius: 36px;
+            border: 1px solid rgba(255,255,255,0.55);
+            box-shadow: 0 40px 120px rgba(0,0,0,0.28), inset 0 0 0 1px rgba(255,255,255,0.35);
+            overflow: hidden;
+        }
+
+        /* ===== YCLIENTS MODAL CONTENT ===== */
+        #yclientsModal .modal-content {
+            position: relative;
+            width: 92%;
+            max-width: 640px;
+            height: 82vh;
+            background: rgba(255,255,255,0.40); /* ← ПРОЗРАЧНО */
+            backdrop-filter: blur(18px); /* ← СТЕКЛО */
+
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 40px 120px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.6);
+        }
+        /* убираем лишние отступы вокруг iframe */
+        #yclientsModal iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+        }
+
+        @media (max-width: 768px) {
+            #yclientsModal .modal-content {
+                background: #fff;
+                backdrop-filter: none;
+                border-radius: 0;
+                height: 100vh;
+            }
+        }
+
+        @keyframes modalUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        /* ===== CLOSE BUTTON ===== */
+        .close-btn {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 400;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15), inset 0 0 0 1px rgba(255,255,255,0.8);
+            cursor: pointer;
+            color: var(--green-dark);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+            .close-btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0 14px 30px rgba(0,0,0,0.22), inset 0 0 0 1px rgba(255,255,255,1);
+            }
+        /* ===== YCLIENTS IFRAME ===== */
+        #yclientsModal iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+        }
+
+        /* ===== APPLE PHOTOS AUTO GRID ===== */
+        #modal .modal-grid {
+            height: 100%;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(160px, 1fr);
+            gap: 16px;
+            padding-right: 6px;
+        }
+
+            #modal .modal-grid img,
+            #modal .modal-grid video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                cursor: pointer;
+                filter: blur(20px);
+                transform: scale(1.05);
+                transition: filter .6s ease, transform .6s ease, opacity .6s ease;
+                animation: gridIn .6s ease forwards;
+                pointer-events: auto;
+                position: relative;
+                display: block;
+            }
+            /* картинки — анимируем */
+            #modal .modal-grid img {
+                opacity: 0;
+            }
+
+            /* видео — ВИДИМЫ СРАЗУ */
+            #modal .modal-grid video {
+                opacity: 1;
+                filter: none;
+                transform: none;
+            }
+            /* ===== VIDEO GRID ITEM ===== */
+        .video-item {
+            position: relative;
+            width: 100%;
+            height: 100%; /* 🔑 важно */
+            border-radius: 20px;
+            overflow: hidden;
+            background: #e7f2ec;
+        }
+
+            .video-item video {
+                display: none; /* ❗ всегда скрыто */
+            }
+
+            .video-item canvas {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .video-poster {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-item .play-icon {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            color: white;
+            text-shadow: 0 10px 30px rgba(0,0,0,.6);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+            /* ===== VIDEO BADGE ===== */
+            #modal .modal-grid .video-badge {
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                background: rgba(0,0,0,0.55);
+                backdrop-filter: blur(6px);
+                color: #fff;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: .08em;
+                padding: 6px 10px;
+                border-radius: 14px;
+                pointer-events: none;
+                text-transform: uppercase;
+            }
+
+            #modal .modal-grid .video-item:not(.loaded) .play-icon {
+                opacity: 1;
+            }
+
+            #modal .modal-grid .video-item.loaded .play-icon {
+                opacity: 0;
+            }
+
+            /* reel accent */
+            #modal .modal-grid .video-item.reel .video-badge {
+                background: linear-gradient(135deg,#ff3b3b,#ff8f00);
+            }
+
+            /* hide play icon when playing */
+            #modal .modal-grid .video-item.loaded .play-icon {
+                opacity: 0;
+            }
+
+            #modal .modal-grid .video-item {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+                /* play icon */
+                #modal .modal-grid .video-item .play-icon {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 56px;
+                    color: white;
+                    text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+                    pointer-events: none;
+                    opacity: 0.85;
+                    transition: opacity .4s ease;
+                }
+
+                /* hide play when loaded */
+                #modal .modal-grid .video-item.loaded .play-icon {
+                    opacity: 0;
+                }
+
+            /* loaded = blur off */
+            #modal .modal-grid img.loaded,
+            #modal .modal-grid video.loaded {
+                filter: blur(0);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+        @keyframes gridIn {
+            from {
+                transform: translateY(30px) scale(0.96);
+                opacity: 0;
+            }
+
+            to {
+                transform: none;
+                opacity: 1;
+            }
+        }
+
+        #modal .modal-grid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+        }
+
+        /* акценты */
+        #modal .modal-grid .big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        #modal .modal-grid .wide {
+            grid-column: span 2;
+        }
+
+        #modal .modal-grid .tall {
+            grid-row: span 2;
+        }
+
+        /* аккуратный скролл */
+        #modal .modal-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #modal .modal-grid::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.25);
+            border-radius: 8px;
+        }
+
+        #modal .modal-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        @media (max-width: 768px) {
+            #modal .modal-content {
+                background: rgba(255,255,255,0.55);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-radius: 0;
+                height: 100vh;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            #modal .modal-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #modal .modal-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 140px;
+            }
+
+                /* отключаем акценты */
+                #modal .modal-grid img {
+                    grid-column: span 1 !important;
+                    grid-row: span 1 !important;
+                }
+        }
+
+        @media (max-width: 480px) {
+            #modal .modal-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+            }
+        }
+
+        /* ===== VIEWER WITH BLUR BACKGROUND ===== */
+        .viewer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+            .viewer img,
+            .viewer video,
+            .viewer iframe {
+                max-width: 80vw;
+                max-height: 80vh;
+                border-radius: 24px;
+                object-fit: contain;
+            }
+
+            .viewer iframe {
+                width: 80vw;
+                height: 80vh;
+                border: none;
+                border-radius: 24px;
+                background: #000;
+            }
+
+        .viewer-btn {
+            position: fixed; /* 🔑 ВАЖНО */
+            top: 0;
+            bottom: 0;
+            width: 90px; /* большая зона клика */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 4500;
+            user-select: none;
+            transition: background .25s ease, opacity .25s ease;
+            opacity: 0.85;
+        }
+
+            .viewer-btn[data-nav="-1"] {
+                left: 0;
+            }
+
+            .viewer-btn[data-nav="1"] {
+                right: 0;
+            }
+
+            /* hover (ПК) */
+            .viewer-btn:hover {
+                opacity: 1;
+                background: linear-gradient( to right, rgba(0,0,0,0.35), rgba(0,0,0,0) );
+            }
+
+            .viewer-btn[data-nav="1"]:hover {
+                background: linear-gradient( to left, rgba(0,0,0,0.35), rgba(0,0,0,0) );
+            }
+
+        /* мобильные */
+        @media (max-width: 768px) {
+            .viewer-btn {
+                width: 60px;
+                font-size: 36px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity .25s ease;
+            }
+            .viewer.show-controls .viewer-btn {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: linear-gradient(135deg,#2f5d4a,#3f6f5e);
+            color: #fff;
+            padding: 90px 20px;
+            text-align: left;
+        }
+
+        .footer-social a {
+            margin: 0 8px;
+            padding: 12px 22px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.15);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media(max-width:768px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+            .about-slider {
+                height: 280px;
+            }
+        }
+        /* ===== BOOKING (ИЗ ТВОЕГО КОДА) ===== */
+        .booking-main {
+            grid-column: span 2;
+            text-align: center;
+            background: linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,.25));
+        }
+
+        .booking-icon {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .booking-main p,
+        .booking-alt p {
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .booking-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: #2f5d4a;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        .booking-btn {
+            font-size: 16px;
+            padding: 16px 48px;
+            position: relative;
+        }
+
+            .booking-btn:hover {
+                background: #fff;
+                box-shadow: 0 0 0 6px rgba(245,199,107,.35), 0 20px 40px rgba(0,0,0,.25);
+            }
+
+        .booking-messengers {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn.mini {
+            padding: 12px 26px;
+            font-size: 14px;
+        }
+
+        @media(max-width:900px) {
+            .booking-main {
+                grid-column: span 1;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+        }
+
+            .social-icons a {
+                width: 42px;
+                height: 42px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .social-icons svg {
+                width: 20px;
+                height: 20px;
+                display: block;
+                fill: currentColor;
+            }
+
+        .footer-right {
+            display: flex;
+            justify-content: left;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .icon-btn {
+            width: 56px;
+            height: 56px;
+            padding: 0;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.65);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(255,255,255,0.6);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 26px 26px;
+            transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
+            background-color: #fff;
+        }
+
+            .icon-btn:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 14px 30px rgba(0,0,0,0.14), inset 0 0 0 1px rgba(255,255,255,0.9);
+                background-color: rgba(255,255,255,0.85);
+            }
+
+            .icon-btn.vk {
+                background-image: url("icons/vk.svg");
+            }
+
+            .icon-btn.tg {
+                background-image: url("icons/telegram.svg");
+            }
+
+            .icon-btn.wa {
+                background-image: url("icons/whatsapp.svg");
+            }
+
+        /* ================= MOBILE NAVBAR ================= */
+        .burger,
+        .mobile-menu,
+        .mobile-socials {
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+
+            /* скрываем desktop меню */
+            .nav-links,
+            .social-icons {
+                display: none;
+            }
+
+            .navbar {
+                left: 0 !important;
+                top: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                transform: none !important;
+                border-radius: 0 0 28px 28px !important;
+            }
+
+                .navbar.scrolled {
+                    top: 12px !important;
+                    left: 12px !important;
+                    width: calc(100% - 24px) !important;
+                    max-width: calc(100% - 24px) !important;
+                    border-radius: 32px !important;
+                    background: rgba(255,255,255,.35) !important;
+                    box-shadow: 0 25px 60px rgba(0,0,0,.18);
+                    transform: none !important;
+                    right: auto !important;
+                }
+
+            .nav-inner {
+                padding: 14px 18px;
+            }
+
+            /* burger */
+            .burger {
+                width: 26px;
+                height: 18px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+            }
+
+                .burger span {
+                    height: 2px;
+                    background: var(--green-dark);
+                    border-radius: 2px;
+                    transition: .3s;
+                }
+
+                .burger.active span:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                .burger.active span:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .burger.active span:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+
+            /* MOBILE MENU – ПРОДОЛЖЕНИЕ NAVBAR */
+            .mobile-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 22px;
+                /* тот же цвет, но БЕЗ blur */
+                background: rgba(255,255,255,.1);
+                border-top: 1px solid var(--glass-border);
+                border-radius: 0 0 28px 28px;
+                max-height: 0;
+                opacity: 0;
+                padding: 0;
+                overflow: hidden;
+                transition: max-height .45s cubic-bezier(.4,.8,.2,1), opacity .25s ease;
+                pointer-events: none;
+            }
+
+                .mobile-menu.active {
+                    max-height: 700px;
+                    padding: 26px 0 32px;
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+
+                .mobile-menu .mobile-socials {
+                    display: flex;
+                }
+
+            .mobile-socials {
+                margin-top: 32px;
+                padding-top: 22px;
+                border-top: 1px solid rgba(255,255,255,0.35);
+                display: flex;
+                gap: 18px;
+                justify-content: center;
+            }
+
+            .mobile-menu a {
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--green-dark);
+                text-decoration: none;
+            }
+        }
+
+        .mobile-socials a {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,.12), inset 0 0 0 1px rgba(255,255,255,.6);
+            transition: transform .25s ease, background .25s ease;
+        }
+
+            .mobile-socials a:hover {
+                transform: translateY(-3px);
+                background: rgba(255,255,255,.8);
+            }
+
+            .mobile-socials a:active {
+                transform: scale(0.95);
+            }
+
+        .mobile-socials svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--green-dark);
+        }
+        /* ===== ABOUT SLIDER BLUR BACKGROUND ===== */
+
+        .about-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: .8s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+            .about-slide::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: inherit;
+                filter: blur(28px);
+                transform: scale(1.15);
+                pointer-events: none;
+            }
+
+            .about-slide.active {
+                opacity: 1;
+            }
+
+            .about-slide img {
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        #booking .grid {
+            margin-top: 40px;
+        }
+
+        .modal-close {
+            position: fixed; /* 🔑 ВАЖНО */
+            top: 24px;
+            right: 24px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.8);
+            z-index: 6000; /* 🔑 ВЫШЕ МОДАЛКИ */
+        }
+
+            .modal-close:hover {
+                transform: scale(1.1);
+                background: rgba(255,255,255,1);
+            }
+
+        .contacts-box {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 36px 40px;
+            border-radius: 32px;
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.35);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .contacts-socials {
+            display: flex;
+            gap: 14px;
+        }
+
+            .contacts-socials a {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255,255,255,0.65);
+                color: #2f5d4a;
+                font-weight: 700;
+                text-decoration: none;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+                transition: transform .25s ease, box-shadow .25s ease;
+            }
+
+                .contacts-socials a:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+                }
+
+        @media (max-width: 600px) {
+            .contacts-box {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .icon {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+            display: block;
+        }
+        /* ===== FLOATING GLASS BOOKING BUTTON ===== */
+        .floating-booking-btn {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 26px;
+            min-height: 56px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,0.45);
+            background: rgba(255,255,255,0.55);
+            backdrop-filter: blur(14px);
+            color: #2f5d4a;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18), inset 0 0 0 1px rgba(255,255,255,0.6);
+            cursor: pointer;
+            text-decoration: none;
+            user-select: none;
+            transition: all .35s ease;
+            animation: booking-pulse 3.5s ease-out infinite;
+            overflow: hidden;
+        }
+
+            /* hover */
+            .floating-booking-btn:hover {
+                transform: translateY(-4px) scale(1.05);
+                background: linear-gradient( 135deg, rgba(255,255,255,0.75), rgba(255,255,255,0.45) );
+                box-shadow: 0 26px 60px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(255,255,255,0.85);
+                animation-play-state: paused;
+            }
+
+            /* active */
+            .floating-booking-btn:active {
+                transform: scale(0.96);
+            }
+
+        /* glass pulse */
+        @keyframes bookingGlassPulse {
+            0% {
+                box-shadow: 0 18px 40px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.6), 0 0 0 0 rgba(255,255,255,0.45);
+            }
+
+            70% {
+                box-shadow: 0 18px 40px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.6), 0 0 0 20px rgba(255,255,255,0);
+            }
+
+            100% {
+                box-shadow: 0 18px 40px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.6), 0 0 0 0 rgba(255,255,255,0);
+            }
+        }
+
+        /* mobile */
+        @media (max-width: 768px) {
+            .floating-booking-btn {
+                right: 16px;
+                bottom: 16px;
+                padding: 14px 24px;
+                font-size: 14px;
+            }
+        }
+        /* ===== CONTENT LAYOUT ===== */
+        .floating-booking-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            overflow: hidden;
+        }
+
+            /* icon */
+            .floating-booking-btn .btn-icon {
+                font-size: 18px;
+                line-height: 1;
+                transform: translateY(-1px);
+            }
+
+            /* text wrapper */
+            .floating-booking-btn .btn-text {
+                position: relative;
+                height: 1em;
+                overflow: hidden;
+            }
+
+            /* texts */
+            .floating-booking-btn .text-default,
+            .floating-booking-btn .text-hover {
+                display: block;
+                transition: transform .35s ease, opacity .35s ease;
+                white-space: nowrap;
+            }
+
+            .floating-booking-btn .text-hover {
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: translateY(100%);
+                opacity: 0;
+            }
+
+            /* ===== HOVER TEXT CHANGE ===== */
+            .floating-booking-btn:hover .text-default {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            .floating-booking-btn:hover .text-hover {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            /* gradient shine */
+            .floating-booking-btn::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient( 120deg, transparent 0%, rgba(255,255,255,0.6) 45%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.6) 55%, transparent 100% );
+                transform: translateX(-120%);
+                transition: transform .6s ease;
+                pointer-events: none;
+            }
+
+            .floating-booking-btn:hover::before {
+                transform: translateX(120%);
+            }
+            /* hide floating button when modal is open */
+            .floating-booking-btn.hidden {
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(20px) scale(0.9);
+            }
+
+            .floating-booking-btn svg {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+            }
+
+            .floating-booking-btn span {
+                display: inline-block;
+                white-space: nowrap;
+            }
+
+        @keyframes booking-pulse {
+            0% {
+                box-shadow: 0 12px 30px rgba(0,0,0,0.18), 0 0 0 0 rgba(245,199,107,0.45);
+            }
+
+            70% {
+                box-shadow: 0 18px 40px rgba(0,0,0,0.22), 0 0 0 18px rgba(245,199,107,0);
+            }
+
+            100% {
+                box-shadow: 0 12px 30px rgba(0,0,0,0.18), 0 0 0 0 rgba(245,199,107,0);
+            }
+        }
+
+        .floating-booking-btn .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            background: rgba(255,255,255,0.55);
+            animation: ripple 600ms ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* ===== YCLIENTS FLOATING CLOSE ===== */
+        #yclientsModal .yclients-close {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            cursor: pointer;
+            color: #2f5d4a;
+            z-index: 5000;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+            transition: transform .25s ease, background .25s ease;
+        }
+
+            #yclientsModal .yclients-close:hover {
+                transform: scale(1.1);
+                background: rgba(255,255,255,0.95);
+            }
+        /* ================= SERVICES GRID ================= */
+
+        .services-grid {
+            --gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+        }
+
+        /* второй ряд */
+        .services-row-center {
+            grid-column: 1 / -1; /* на всю ширину грида */
+            display: flex;
+            justify-content: center;
+            gap: var(--gap);
+        }
+
+            /* ширина карточек второго ряда */
+            .services-row-center .service-card {
+                width: calc((100% - var(--gap)) / 2);
+            }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-row-center {
+                flex-direction: column;
+            }
+
+                .services-row-center .service-card {
+                    width: 100%;
+                }
+        }
+        /* ===== FEED ===== */
+        .vk-feed {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+            align-items: start;
+        }
+
+        /* ===== POST ===== */
+        .vk-post-inner {
+            border-radius: 28px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== DATE ===== */
+        .vk-date {
+            font-size: 13px;
+            color: #6b7d73;
+            margin-bottom: 8px;
+        }
+
+        /* ===== TEXT ===== */
+        .vk-text {
+            font-size: 15px;
+            line-height: 1.55;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+            .vk-text.expanded {
+                -webkit-line-clamp: unset;
+            }
+
+        .vk-more {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--green-dark);
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        /* ===== VK TEXT LINKS STYLE ===== */
+        .vk-text a {
+            color: inherit; /* убираем синий */
+            text-decoration: none; /* убираем подчёркивание */
+            font-weight: 500;
+            border-bottom: 1px solid rgba(47, 93, 74, 0.35); /* лёгкий акцент */
+            transition: color .2s ease, border-color .2s ease;
+        }
+
+            .vk-text a:hover {
+                color: #2f5d4a; /* твой зелёный */
+                border-bottom-color: #2f5d4a;
+            }
+
+        /* ===== MEDIA ===== */
+        .vk-media {
+            position: relative;
+            height: 260px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #e7f2ec;
+        }
+
+            /* размытый фон */
+            .vk-media::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: var(--bg);
+                background-size: cover;
+                background-position: center;
+                filter: blur(32px);
+                transform: scale(1.25);
+            }
+
+            /* основное фото / превью */
+            .vk-media img {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: transform .5s ease;
+            }
+        .vk-post:hover .vk-media img {
+            transform: scale(1.02);
+        }
+        .vk-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 14px;
+            flex: 1;
+        }
+
+        /* ===== STATS ===== */
+        .vk-stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 14px;
+            font-size: 14px;
+            color: #2f5d4a;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .vk-feed {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .vk-post,
+            .vk-post:hover {
+                transform: none;
+                box-shadow: 0 30px 80px rgba(0,0,0,.1);
+            }
+        }
+
+        /* ===== VK POST = CARD ===== */
+        .vk-post {
+            background: var(--glass-bg);
+            backdrop-filter: blur(18px);
+            border-radius: 32px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 30px 80px rgba(0,0,0,.1);
+            transition: transform .5s ease, box-shadow .5s ease;
+            will-change: transform, box-shadow;
+        }
+
+            .vk-post:hover {
+                transform: translateY(-14px) scale(1.02);
+                box-shadow: 0 45px 100px rgba(0,0,0,.16);
+            }
+
+        .vk-open {
+            width: 80vw;
+            height: 80vh;
+            background: #000;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .vk-open a {
+                color: #fff;
+                font-size: 20px;
+                text-decoration: none;
+                padding: 18px 28px;
+                border-radius: 32px;
+                background: rgba(255,255,255,0.15);
+                backdrop-filter: blur(10px);
+                transition: transform .25s ease, background .25s ease;
+            }
+
+                .vk-open a:hover {
+                    background: rgba(255,255,255,0.25);
+                    transform: scale(1.05);
+                }
+
+
+        /* === FIX: одинаковые отступы между секциями === */
+        #reviews-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+            #reviews-section .reviews-fullwidth,
+            #reviews-section .reviews-viewport,
+            #reviews-section .reviews-wrapper {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        /* ===== MOBILE: LIST VIEW FOR WORKS ===== */
+        @media (max-width: 768px) {
+            #modal .modal-grid {
+                display: flex !important;
+                flex-direction: column;
+                gap: 16px;
+                grid-template-columns: none !important;
+                grid-auto-rows: unset !important;
+                height: 100%;
+            }
+
+                #modal .modal-grid > * {
+                    height: auto !important;
+                    min-height: 220px;
+                }
+
+                /* отключаем паттерны */
+                #modal .modal-grid .big,
+                #modal .modal-grid .wide,
+                #modal .modal-grid .tall {
+                    grid-column: unset !important;
+                    grid-row: unset !important;
+                }
+                #modal .modal-grid > .video-item {
+                    min-height: 220px;
+                }
+        }
+
+    </style>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BeautySalon",
+          "name": "Best For You",
+          "image": "https://best-4-you.ru/logo.png",
+          "url": "https://best-4-you.ru/",
+          "telephone": "+79056596973",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Воронеж",
+            "addressCountry": "RU"
+          },
+          "openingHours": "Mo-Su 10:00-21:00",
+          "sameAs": [
+            "https://vk.com/b_f_u",
+            "https://t.me/stasik958"
+          ]
+        }
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106698175', 'ym');
+
+    ym(106698175, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});</script>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/106698175" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+        <!-- VK -->
+        <symbol id="icon-vk" viewBox="0 0 32 32">
+            <path d="M16.563 15.75c-0.5-0.188-0.5-0.906-0.531-1.406-0.125-1.781 0.5-4.5-0.25-5.656-0.531-0.688-3.094-0.625-4.656-0.531-0.438 0.063-0.969 0.156-1.344 0.344s-0.75 0.5-0.75 0.781c0 0.406 0.938 0.344 1.281 0.875 0.375 0.563 0.375 1.781 0.375 2.781 0 1.156-0.188 2.688-0.656 2.75-0.719 0.031-1.125-0.688-1.5-1.219-0.75-1.031-1.5-2.313-2.063-3.563-0.281-0.656-0.438-1.375-0.844-1.656-0.625-0.438-1.75-0.469-2.844-0.438-1 0.031-2.438-0.094-2.719 0.5-0.219 0.656 0.25 1.281 0.5 1.813 1.281 2.781 2.656 5.219 4.344 7.531 1.563 2.156 3.031 3.875 5.906 4.781 0.813 0.25 4.375 0.969 5.094 0 0.25-0.375 0.188-1.219 0.313-1.844s0.281-1.25 0.875-1.281c0.5-0.031 0.781 0.406 1.094 0.719 0.344 0.344 0.625 0.625 0.875 0.938 0.594 0.594 1.219 1.406 1.969 1.719 1.031 0.438 2.625 0.313 4.125 0.25 1.219-0.031 2.094-0.281 2.188-1 0.063-0.563-0.563-1.375-0.938-1.844-0.938-1.156-1.375-1.5-2.438-2.563-0.469-0.469-1.063-0.969-1.063-1.531-0.031-0.344 0.25-0.656 0.5-1 1.094-1.625 2.188-2.781 3.188-4.469 0.281-0.5 0.938-1.656 0.688-2.219-0.281-0.625-1.844-0.438-2.813-0.438-1.25 0-2.875-0.094-3.188 0.156-0.594 0.406-0.844 1.063-1.125 1.688-0.625 1.438-1.469 2.906-2.344 4-0.313 0.375-0.906 1.156-1.25 1.031z" />
+        </symbol>
+
+        <!-- WhatsApp -->
+        <symbol id="icon-wa" viewBox="0 0 24 24">
+            <path d="M12.04 2C6.52 2 2 6.48 2 12c0 2.12.56 4.1 1.62 5.83L2 22l4.3-1.58A9.94 9.94 0 0 0 12.04 22C17.56 22 22 17.52 22 12S17.56 2 12.04 2zm0 18.16c-1.67 0-3.3-.45-4.7-1.3l-.34-.2-2.56.94.96-2.49-.22-.36A8.11 8.11 0 0 1 3.9 12c0-4.5 3.66-8.16 8.14-8.16 4.49 0 8.12 3.66 8.12 8.16s-3.63 8.16-8.12 8.16zm4.46-6.05c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.43l-.46-.01c-.16 0-.42.06-.64.3s-.84.82-.84 2 .86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.42-.58 1.62-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z" />
+        </symbol>
+
+        <!-- Telegram -->
+        <symbol id="icon-tg" viewBox="0 0 24 24">
+            <path d="M9.99 15.18l-.4 5.58c.57 0 .82-.25 1.12-.54l2.69-2.57 5.58 4.08c1.02.56 1.75.27 2.01-.94L24 2.9c.33-1.54-.56-2.14-1.55-1.77L1.3 9.45c-1.49.58-1.47 1.4-.27 1.77l5.42 1.7L19.1 5.7c.6-.4 1.15-.18.7.22z" />
+        </symbol>
+
+    </svg>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="logo">
+                <img src="logo.png" alt="Салон красоты Best For You в Воронеже">
+                Best For You
+            </a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#hero">Главная</a>
+                    <a href="#about">О салоне</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#promo">Акции</a>
+                    <a href="#team">Команда</a>
+                    <a href="#reviews-section">Отзывы</a>
+                    <a href="#booking">Запись</a>
+                    <a href="#contacts">Контакты</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://vk.com/b_f_u?entrypoint=cta" aria-label="ВКонтакте" rel="noopener">
+                        <svg class="icon"><use href="#icon-vk"></use></svg>
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=79056596973&text&type=phone_number&app_absent=0" aria-label="WhatsApp" rel="noopener">
+                        <svg class="icon"><use href="#icon-wa"></use></svg>
+                    </a>
+
+                    <a href="https://t.me/stasik958" aria-label="Telegram" rel="noopener">
+                        <svg class="icon"><use href="#icon-tg"></use></svg>
+                    </a>
+                </div>
+                <div class="burger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero" onclick="closeMenu()">Главная</a>
+            <a href="#about" onclick="closeMenu()">О салоне</a>
+            <a href="#services" onclick="closeMenu()">Услуги</a>
+            <a href="#promo" onclick="closeMenu()">Акции</a>
+            <a href="#team" onclick="closeMenu()">Команда</a>
+            <a href="#reviews-section" onclick="closeMenu()">Отзывы</a>
+            <a href="#booking" onclick="closeMenu()">Запись</a>
+            <a href="#contacts" onclick="closeMenu()">Контакты</a>
+            <div class="mobile-socials">
+                <a href="https://vk.com/b_f_u" aria-label="ВКонтакте" rel="noopener">
+                    <svg class="icon">
+                        <use href="#icon-vk"></use>
+                    </svg>
+                </a>
+
+                <a href="https://api.whatsapp.com/send/?phone=79056596973&text&type=phone_number&app_absent=0" aria-label="WhatsApp" rel="noopener">
+                    <svg class="icon"><use href="#icon-wa"></use></svg>
+                </a>
+
+                <a href="https://t.me/stasik958" aria-label="Telegram" rel="noopener">
+                    <svg class="icon"><use href="#icon-tg"></use></svg>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <header id="hero">
+        <div class="hero">
+            <h1>Салон красоты в Воронеже Best For You</h1>
+            <p>Индивидуальный подход, стиль и забота о вашей красоте</p>
+            <a href="#booking" class="btn">Онлайн-запись</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>О салоне</h2>
+        <p>
+            Best For You — современный салон красоты в Воронеже, где ценят индивидуальность и заботятся о результате. Мы помогаем подчеркнуть вашу естественную красоту, создавая образы, которые подходят именно вам и вашему стилю жизни.
+
+            В нашем салоне работают опытные мастера, которые внимательно относятся к каждому клиенту, используют профессиональную косметику и современные техники. Мы создаём комфортную атмосферу, в которой приятно расслабиться и доверить свою красоту специалистам.
+
+            Best For You — это качество, честные рекомендации и сервис, к которому хочется возвращаться.
+        </p>
+
+        <div class="about-slider">
+            <div class="about-slide active" style="background-image: url('foto/inter/1.webp')"><img src="foto/inter/1.webp" loading="lazy" decoding="async"></div>
+            <div class="about-slide" style="background-image: url('foto/inter/2.webp')"><img src="foto/inter/2.webp" loading="lazy" decoding="async"></div>
+            <div class="about-slide" style="background-image: url('foto/inter/3.webp')"><img src="foto/inter/3.webp" loading="lazy" decoding="async"></div>
+            <div class="about-slide" style="background-image: url('foto/inter/4.webp')"><img src="foto/inter/4.webp" loading="lazy" decoding="async"></div>
+            <div class="about-slide" style="background-image: url('foto/inter/5.webp')"><img src="foto/inter/5.webp" loading="lazy" decoding="async"></div>
+            <div class="about-slide" style="background-image: url('foto/inter/6.webp')"><img src="foto/inter/6.webp" loading="lazy" decoding="async"></div>
+            <div class="about-slide" style="background-image: url('foto/inter/7.webp')"><img src="foto/inter/7.webp" loading="lazy" decoding="async"></div>
+            <div class="slider-arrow left" onclick="prevSlide()" aria-label="Предыдущий слайд">‹</div>
+            <div class="slider-arrow right" onclick="nextSlide()" aria-label="Следующий слайд">›</div>
+        </div>
+    </section>
+
+<section id="vk-section">
+    <h2>Новости</h2>
+    <div class="vk-feed" id="vk-feed"></div>
+</section>
+
+    <section id="services">
+        <h2>Услуги</h2>
+        <div class="services-grid">
+            <div class="card service-card"><strong>Стрижки</strong>Форма, которая держится и подчёркивает вас</div>
+            <div class="card service-card"><span class="badge sale">🔥</span><strong>Окрашивание</strong>Чистый цвет и сложные техники без сюрпризов</div>
+            <div class="card service-card"><span class="badge sale">🔥</span><strong>Наращивание</strong>Длина и объём с естественным результатом</div>
+            <div class="services-row-center">
+                <div class="card service-card"><strong>Уход за волосами</strong>Восстановление, блеск и живые волосы</div>
+                <div class="card service-card"><strong>Макияж</strong>Образ для события и уверенности в себе</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promo">
+        <h2>Акции</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="badge sale">-10%</span>
+                <strong>Скидка за первое посещение</strong>
+                Получите скидку 10% на любую услугу при первом визите.
+            </div>
+            <div class="card">
+                <span class="badge hit">ХИТ</span>
+                <strong>Приведи подругу</strong>
+                Вы получаете 15% на следующую процедуру.
+            </div>
+            <div class="card">
+                <span class="badge gift">ПОДАРОК</span>
+                <strong>Скидка в день рождения</strong>
+                20% в день рождения и 3 дня после.
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2>Команда</h2>
+        <div class="grid">
+            <div class="card team-card" data-master="mas1">
+                <img src="mas1.webp" alt="Парикмахер женский мастер в салоне красоты Best For You Воронеж" loading="lazy" decoding="async">
+                <div class="team-overlay"><div class="team-name">Эля<br>Парикмахер-женский мастер</div></div>
+            </div>
+            <div class="card team-card" data-master="mas2">
+                <img src="mas2.webp" alt="Парикмахер-колорист, визажист в салоне красоты Best For You Воронеж" loading="lazy" decoding="async">
+                <div class="team-overlay"><div class="team-name">Виктория<br>Парикмахер-колорист, визажист</div></div>
+            </div>
+            <div class="card team-card" data-master="mas3">
+                <img src="mas3.webp" alt="Визажист в салоне красоты Best For You Воронеж" loading="lazy" decoding="async">
+                <div class="team-overlay"><div class="team-name">Светлана<br>Парикмахер-колорист</div></div>
+            </div>
+        </div>
+    </section>
+    <section id="reviews-section">
+        <h2>Отзывы клиентов</h2>
+        <div class="reviews-fullwidth">
+        <div class="reviews-viewport">
+            <div class="reviews-wrapper">
+                <div class="reviews-track">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p>
+                            Нашла салон совершенно случайно. Записалась на стрижку к Екатерине Бочкарёвой, доверяя своей интуиции. И не прогадала! У меня теперь идеально ровный срез на каре, что для меня важно. Волосы у меня ооочень густые, проблемные и мало кто может постричь их так ровно. Также по моему запросу сделала идеальную челку-шторку, которую я и хотела. Плюсом получила много советов касаемо укладки и ухода.
+                            И не могу не отметить очень приятные цены.
+                        </p>
+                        <strong>Валерия Федюнина</strong>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p>В поисках нового мастера по стрижке, посоветовали Екатерину. Осталась очень довольна мастером. С моими проблемными волосами Екатерина справилась на ура! И что самое главное, она меня услышала. Учла все пожелания. Спасибо ей огромное. Много советов по укладке получила, а также по её рекомендации использую новые средства, которые держат причёску. Браво мастеру. Езжу теперь только к ней, несмотря на то, что живу в другом конце города.</p>
+                        <strong>Марина Рыжкина</strong>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p>
+                            Екатерина, мастер маникюра и педикюра очень внимательный, приятный в общении специалист. Подчёркиваю аккуратность и сосредоточенность на работе. Работает с душой и уважением к клиенту. Буду обращаться к Екатерине снова и рекомендую.
+                            Высокая клиентоориентированность (всегда предложат плед, горячий чай/ кофе) , уютный и милый салон ✨
+                        </p>
+                        <strong>Виктория П.</strong>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p>Очень понравилось! Мастер работает спокойно и уверенно, все вопросы по делу. Обстановка уютная. Стрижка получилась отличная. Хорошее настроение на целый день.</p>
+                        <strong>Виктор Оленев</strong>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p>Стригся у мастера Виктории остался крайне доволен .Отличное место , замечательный специалист давно искал такого мастера . Рекомендую к посещению</p>
+                        <strong>виталий д.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </section>
+    <section id="booking">
+        <h2>Онлайн-запись</h2>
+        <p>Выберите удобный способ записи — мы быстро подтвердим визит.</p>
+        <div class="grid">
+            <div class="card booking-main">
+                <span class="booking-badge">Самый удобный способ</span>
+                <div class="booking-icon">📅</div>
+                <strong>Онлайн-запись через YCLIENTS</strong>
+                <p>Выбор мастера, времени и мгновенное подтверждение.</p>
+                <a href="#booking" class="btn booking-btn" onclick="openYclients()">
+                    Записаться онлайн
+                </a>
+            </div>
+
+            <div class="card booking-alt">
+                <div class="booking-icon">💬</div>
+                <strong>Запись через мессенджеры</strong>
+                <p>Напишите нам — мы подберём удобное время.</p>
+                <div class="booking-messengers">
+                    <a href="https://vk.com/b_f_u?entrypoint=cta&w=service-booking-214487812"
+                       class="btn mini icon-btn vk"
+                       target="_blank"
+                       aria-label="ВКонтакте" rel="noopener"></a>
+
+                    <a href="https://t.me/stasik958"
+                       class="btn mini icon-btn tg"
+                       target="_blank"
+                       aria-label="Telegram" rel="noopener"></a>
+
+                    <a href="https://wa.me/79056596973"
+                       class="btn mini icon-btn wa"
+                       target="_blank"
+                       aria-label="WhatsApp" rel="noopener"></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts" itemscope itemtype="https://schema.org/BeautySalon">
+        <div class="contacts-box">
+            <div class="contacts-info">
+                <div class="contacts-title">Контакты</div>
+                <p class="contacts-address" itemscope itemtype="https://schema.org/PostalAddress">
+                    📍 <a href="https://yandex.ru/maps/org/best_for_you/111383570959/?ll=39.184423%2C51.686194&z=16" target="_blank" style="color:#fff;" rel="noopener">г. Воронеж ул. Московский проспект, 20</a>
+                </p>
+                <p class="contacts-address" itemscope itemtype="https://schema.org/PostalAddress">
+                    📞<a href="Tel:+79056596973" target="_blank" style="color:#fff;">+7 (905) 659-69-73</a>
+                </p>
+            </div>
+
+            <div class="contacts-socials">
+                <a href="https://vk.com/b_f_u" aria-label="ВКонтакте" rel="noopener"><svg class="icon"><use href="#icon-vk"></use></svg></a>
+                <a href="https://t.me/stasik958" aria-label="Telegram" rel="noopener"><svg class="icon"><use href="#icon-wa"></use></svg></a>
+                <a href="https://wa.me/79056596973" aria-label="WhatsApp" rel="noopener"><svg class="icon"><use href="#icon-tg"></use></svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-grid" id="modalGrid"></div>
+        </div>
+        <div class="modal-close" onclick="closeTeamModal()">×</div>
+    </div>
+<div class="modal" id="viewerModal">
+    <div class="viewer" id="viewer"></div>
+
+    <!-- ❌ КРЕСТИК -->
+    <div class="modal-close" id="viewerClose">×</div>
+</div>
+    <div class="modal" id="yclientsModal">
+        <div class="yclients-close" onclick="closeYclients()">×</div>
+
+        <div class="modal-content">
+            <iframe src="https://n1307940.yclients.com/widget"></iframe>
+        </div>
+    </div>
+
+    <script>/* ================= DATA ================= */
+const works = {
+    mas1: [
+        'foto/mas1/1.mp4',
+        'foto/mas1/2.webp',
+        'foto/mas1/3.mp4',
+        'foto/mas1/4.webp',
+        'foto/mas1/5.webp',
+        'foto/mas1/6.mp4',
+        'foto/mas1/7.mp4',
+        'foto/mas1/8.mp4',
+        'foto/mas1/9.mp4',
+        'foto/mas1/10.mp4',
+        'foto/mas1/11.mp4',
+        'foto/mas1/12.mp4'
+    ],
+    mas2: [
+        'foto/mas2/1.webp',
+        'foto/mas2/2.webp',
+        'foto/mas2/3.webp',
+        'foto/mas2/4.webp',
+        'foto/mas2/5.webp',
+        'foto/mas2/6.webp',
+        'foto/mas2/7.webp',
+        'foto/mas2/8.webp',
+        'foto/mas2/9.webp',
+        'foto/mas2/10.mp4'
+    ],
+    mas3: [
+        'foto/mas3/1.webp',
+        'foto/mas3/2.webp',
+        'foto/mas3/3.webp',
+        'foto/mas3/4.webp',
+        'foto/mas3/5.webp',
+        'foto/mas3/6.webp',
+        'foto/mas3/7.webp'
+    ]
+};
+
+/* ================= ELEMENTS ================= */
+const modal = document.getElementById('modal');
+const modalGrid = document.getElementById('modalGrid');
+const viewerModal = document.getElementById('viewerModal');
+        const viewer = document.getElementById('viewer');
+        let hideArrowsTimer = null;
+
+function showViewerControls() {
+    viewer.classList.add('show-controls');
+
+    clearTimeout(hideArrowsTimer);
+
+    hideArrowsTimer = setTimeout(() => {
+        viewer.classList.remove('show-controls');
+    }, 2000);
+}
+
+const viewerClose = document.getElementById('viewerClose');
+
+if (viewerClose) {
+    viewerClose.onclick = () => {
+        viewer.querySelectorAll('video').forEach(v => {
+            v.pause();
+            v.currentTime = 0;
+        });
+        viewer.innerHTML = '';
+        viewerModal.classList.remove('active');
+    };
+}
+
+viewer.addEventListener('click', e => {
+    e.stopPropagation();
+});
+viewer.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+        showViewerControls();
+    }
+});
+let touchStartX = 0;
+    let touchEndX = 0;
+
+    viewer.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    viewer.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const delta = touchEndX - touchStartX;
+
+        if (Math.abs(delta) < 40) return; // защита от случайных тапов
+
+        if (delta > 0) {
+            navigate(-1); // свайп вправо → назад
+        } else {
+            navigate(1); // свайп влево → вперёд
+        }
+    }
+
+let mediaList = [];
+let vkMediaList = [];
+let currentIndex = 0;
+
+/* ================= OPEN TEAM MODAL ================= */
+document.querySelectorAll('.team-card').forEach(card => {
+    card.addEventListener('click', () => {
+        mediaList = works[card.dataset.master] || [];
+        renderGrid();
+        modal.classList.add('active');
+        lockScroll();
+    });
+});
+function applyAutoPattern() {
+        const items = [...modalGrid.children];
+        items.forEach(el => el.classList.remove('big', 'wide', 'tall'));
+
+        if (items.length < 5) return;
+
+        shuffle(items);
+
+        items[0]?.classList.add('big');
+        items[1]?.classList.add('wide');
+        items[2]?.classList.add('tall');
+    }
+
+    function shuffle(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+    }
+
+    /* ================= GRID ================= */
+    function renderGrid() {
+        modalGrid.innerHTML = mediaList.map((src, i) => {
+            if (/\.(mp4|mov|webm)$/i.test(src)) {
+                return `
+<div class="video-item" data-i="${i}">
+    <canvas class="video-poster"></canvas>
+    <video src="${src}" muted playsinline preload="metadata"></video>
+    <div class="play-icon">▶</div>
+    <div class="video-badge">VIDEO</div>
+</div>`;
+            }
+            return `<img src="${src}" data-i="${i}">`;
+        }).join('');
+
+        initImages();
+        initVideos();
+        applyAutoPattern();
+    }
+
+    /* ================= IMAGES ================= */
+    function initImages() {
+        modalGrid.querySelectorAll('img').forEach(img => {
+            img.complete
+                ? img.classList.add('loaded')
+                : img.addEventListener('load', () => img.classList.add('loaded'));
+        });
+    }
+
+    /* ================= VIDEOS ================= */
+function initVideos() {
+        modalGrid.querySelectorAll('.video-item').forEach(item => {
+            const video = item.querySelector('video');
+            const canvas = item.querySelector('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // фикс размера canvas — критично для iOS
+            canvas.width = 600;
+            canvas.height = 600;
+
+            video.muted = true;
+            video.playsInline = true;
+            video.preload = 'metadata';
+
+            // после загрузки метаданных
+            video.addEventListener('loadedmetadata', () => {
+                // ❗ НЕ 0, Safari не любит
+                video.currentTime = Math.min(0.35, video.duration / 2);
+            }, { once: true });
+
+            // когда реально перемоталось
+            video.addEventListener('seeked', () => {
+                requestAnimationFrame(() => {
+                    try {
+                        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                        item.classList.add('loaded');
+                    } catch (e) {
+                        console.warn('Video preview failed', e);
+                    }
+                });
+            }, { once: true });
+
+        });
+    }
+
+    /* ================= GRID → VIEWER ================= */
+    modalGrid.addEventListener('click', e => {
+        const item = e.target.closest('.video-item, img');
+        if (!item || item.dataset.i === undefined) return;
+        openViewer(+item.dataset.i);
+    });
+
+    /* ================= VIEWER ================= */
+function openViewer(index) {
+    currentIndex = index;
+    const item = mediaList[currentIndex];
+
+    let html = '';
+
+    /* ===== 1. ЛОКАЛЬНЫЕ ФОТО / ВИДЕО ===== */
+    if (typeof item === 'string') {
+        const isVideo = /\.(mp4|mov|webm)$/i.test(item);
+
+        html = isVideo
+            ? `<video src="${item}" controls autoplay playsinline></video>`
+            : `<img src="${item}">`;
+    }
+
+    /* ===== 2. VK ВИДЕО (КНОПКА) ===== */
+    else if (item.type === 'video') {
+        html = `
+            <div class="vk-open">
+                <a href="https://vk.com/video${item.owner}_${item.id}"
+                   target="_blank"
+                   rel="noopener">
+                   ▶ Открыть видео ВКонтакте
+                </a>
+            </div>
+        `;
+    }
+
+    /* ===== 3. VK ФОТО ===== */
+    else if (item.type === 'image') {
+        html = `<img src="${item.src}">`;
+    }
+
+    /* ===== ЕСТЬ ЛИ ЛИСТАНИЕ ===== */
+    const hasNavigation = mediaList.length > 1;
+
+    viewer.innerHTML = `
+        ${hasNavigation ? `<div class="viewer-btn" data-nav="-1">‹</div>` : ''}
+        ${html}
+        ${hasNavigation ? `<div class="viewer-btn" data-nav="1">›</div>` : ''}
+    `;
+
+    viewerModal.classList.add('active');
+    if (window.innerWidth <= 768) {
+    showViewerControls();
+}
+
+
+    if (hasNavigation) {
+        viewer.querySelectorAll('[data-nav]').forEach(btn => {
+            btn.onclick = e => {
+                e.stopPropagation();
+                navigate(+btn.dataset.nav);
+            };
+        });
+    }
+}
+
+    function navigate(dir) {
+        openViewer((currentIndex + dir + mediaList.length) % mediaList.length);
+        }
+
+    /* ================= CLOSE VIEWER ================= */
+viewerModal.addEventListener('click', e => {
+    if (!e.target.closest('.viewer')) {
+
+        // 1️⃣ остановить видео
+        viewer.querySelectorAll('video').forEach(v => {
+            v.pause();
+            v.currentTime = 0;
+        });
+
+        // 2️⃣ очистить viewer
+        viewer.innerHTML = '';
+
+        // 3️⃣ закрыть
+        viewerModal.classList.remove('active');
+    }
+});
+
+    /* ================= CLOSE TEAM MODAL ================= */
+    function closeTeamModal() {
+        modal.classList.remove('active');
+        modalGrid.querySelectorAll('video').forEach(v => {
+            v.pause();
+            v.currentTime = 0;
+        });
+        unlockScroll();
+    }
+
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            closeTeamModal();
+        }
+    });
+
+/* ================= SCROLL LOCK ================= */
+let scrollY = 0;
+
+function lockScroll() {
+    scrollY = window.scrollY;
+    document.documentElement.classList.add('modal-open');
+    document.body.classList.add('modal-open');
+    document.body.style.top = `-${scrollY}px`;
+}
+
+function unlockScroll() {
+    document.documentElement.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollY);
+}
+document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+
+    if (viewerModal.classList.contains('active')) {
+        viewer.innerHTML = '';
+        viewerModal.classList.remove('active');
+        return;
+    }
+
+    if (modal.classList.contains('active')) {
+        closeTeamModal();
+    }
+
+    if (document.getElementById('yclientsModal').classList.contains('active')) {
+        closeYclients();
+    }
+});
+
+document.addEventListener('keydown', e => {
+    if (!viewerModal.classList.contains('active')) return;
+
+    if (e.key === 'ArrowRight') {
+        navigate(1);
+    }
+
+    if (e.key === 'ArrowLeft') {
+        navigate(-1);
+    }
+});</script>
+
+    <script>function openYclients() {
+        document.getElementById('yclientsModal').classList.add('active');
+        document.querySelector('.floating-booking-btn')?.classList.add('hidden');
+        lockScroll();
+    }
+
+    function closeYclients() {
+        document.getElementById('yclientsModal').classList.remove('active');
+        document.querySelector('.floating-booking-btn')?.classList.remove('hidden');
+        unlockScroll();
+    }
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && document.getElementById('yclientsModal').classList.contains('active')) {
+            closeYclients();
+        }
+    });
+
+        document.getElementById('yclientsModal').addEventListener('click', e => {
+            if (e.target.id === 'yclientsModal') {
+                closeYclients();
+            }
+        });</script>
+    <script>const burger = document.querySelector('.burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function toggleMenu() {
+            burger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+    </script>
+    <script>if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }</script>
+    <script>/* ===== REVIEWS AUTO SCROLL (SAFE VERSION) ===== */
+const wrapper = document.querySelector('.reviews-wrapper');
+const reviewsTrack = document.querySelector('.reviews-track');
+
+if (wrapper && reviewsTrack && !reviewsTrack.dataset.inited) {
+
+    reviewsTrack.dataset.inited = 'true';
+
+    const original = reviewsTrack.innerHTML;
+    reviewsTrack.innerHTML = original + original;
+
+    let pos = 0;
+    let isDragging = false;
+    let lastX = 0;
+    let velocity = 0;
+
+    const speed = window.innerWidth < 768 ? 0.25 : 0.45;
+    const friction = 0.92;
+
+    function loop() {
+        if (!isDragging) {
+            pos -= speed;
+        }
+
+        pos += velocity;
+        velocity *= friction;
+
+        const limit = reviewsTrack.scrollWidth / 2;
+
+        if (pos <= -limit) pos += limit;
+        if (pos >= 0) pos -= limit;
+
+        reviewsTrack.style.transform = `translateX(${pos}px)`;
+        requestAnimationFrame(loop);
+    }
+
+    loop();
+
+    /* ===== DRAG ===== */
+    const start = x => {
+        isDragging = true;
+        lastX = x;
+        velocity = 0;
+    };
+
+    const move = x => {
+        if (!isDragging) return;
+        const dx = x - lastX;
+        pos += dx;
+        velocity = dx;
+        lastX = x;
+    };
+
+    const end = () => {
+        isDragging = false;
+    };
+
+    wrapper.addEventListener('mousedown', e => start(e.clientX));
+    document.addEventListener('mousemove', e => move(e.clientX));
+    document.addEventListener('mouseup', end);
+
+    wrapper.addEventListener('touchstart', e => start(e.touches[0].clientX), { passive: true });
+    document.addEventListener('touchmove', e => move(e.touches[0].clientX), { passive: true });
+    document.addEventListener('touchend', end);
+}</script>
+
+    <a href="javascript:void(0)"
+       class="floating-booking-btn"
+       onclick="openYclients()"
+       aria-label="Онлайн запись">
+
+        <span class="btn-icon">📅</span>
+
+        <span class="btn-text">
+            <span class="text-default">Онлайн-запись</span>
+            <span class="text-hover">Записаться</span>
+        </span>
+
+    </a>
+
+    <script>const navbar = document.querySelector('.navbar');
+function updateNavbar() {
+    if (!navbar) return;
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+}
+
+window.addEventListener('scroll', updateNavbar);
+window.addEventListener('load', updateNavbar);</script>
+
+    <script>/* ===== ABOUT SLIDER ===== */
+const slides = document.querySelectorAll('.about-slide');
+let slideIndex = 0;
+let sliderTimer = null;
+
+function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    slides[index].classList.add('active');
+}
+
+function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+    resetAutoSlide();
+}
+
+function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+    resetAutoSlide();
+}
+
+/* ===== AUTO SLIDE ===== */
+function startAutoSlide() {
+    sliderTimer = setInterval(() => {
+        nextSlide();
+    }, 5000); // 5 секунд
+}
+
+function resetAutoSlide() {
+    clearInterval(sliderTimer);
+    startAutoSlide();
+}
+
+/* ===== INIT ===== */
+if (slides.length > 1) {
+    showSlide(slideIndex);
+    startAutoSlide();
+}</script>
+
+  <script>
+function formatDate(ts) {
+    const d = new Date(ts * 1000);
+    const diff = Math.floor((Date.now() - d) / 86400000);
+    if (diff === 0) return 'сегодня';
+    if (diff === 1) return 'вчера';
+    if (diff < 5) return `${diff} дня назад`;
+    return d.toLocaleDateString('ru-RU');
+}
+function linkify(text) {
+    return text
+        // https://example.com
+        .replace(/(https?:\/\/[^\s<]+)/gi,
+            '<a href="$1" target="_blank" rel="noopener">$1</a>')
+
+        // clck.ru / example.com (без протокола)
+        .replace(/(^|\s)((?:clck\.ru|[a-z0-9-]+\.[a-z]{2,})\/[^\s<]+)/gi,
+            '$1<a href="https://$2" target="_blank" rel="noopener">$2</a>')
+
+        // vk.com/username
+        .replace(/(^|\s)(vk\.com\/[^\s<]+)/gi,
+            '$1<a href="https://$2" target="_blank" rel="noopener">$2</a>')
+
+        // @username
+        .replace(/@([a-zA-Z0-9_]+)/g,
+            '<a href="https://vk.com/$1" target="_blank" rel="noopener">@$1</a>')
+
+        // телефон +7...
+        .replace(/(\+7\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2})/g,
+            '<a href="tel:$1">$1</a>');
+}
+
+
+function loadVkFeed() {
+    fetch('/api/vk-feed.php?ts=' + Date.now(), {
+    headers: {
+        'X-Requested-With': 'XMLHttpRequest'
+    },
+    cache: 'no-store'
+})
+    .then(r => r.json())
+    .then(data => {
+        const feed = document.getElementById('vk-feed');
+        if (!feed) return;
+
+        feed.innerHTML = '';
+        vkMediaList = [];
+
+        data.response.items.slice(0, 3).forEach((post, postIndex) => {
+            const media = [];
+
+(post.attachments || []).forEach(a => {
+    if (a.type === 'photo') {
+        media.push({
+            type: 'image',
+            src: a.photo.sizes.at(-1).url
+        });
+    }
+
+    if (a.type === 'video') {
+        const preview = a.video.image?.at(-1)?.url;
+        const mp4 = a.video.files?.mp4_720 || a.video.files?.mp4_480;
+
+        media.push({
+            type: 'video',
+            preview,
+            src: mp4 || null,
+            owner: a.video.owner_id,
+            id: a.video.id
+        });
+    }
+});
+            const article = document.createElement('article');
+            article.className = 'vk-post';
+
+            let mediaHtml = '';
+
+if (media.length) {
+    const first = media[0];
+
+    if (first.type === 'image') {
+       mediaHtml = `
+  <div class="vk-media"
+       data-index="${vkMediaList.length}"
+       style="--bg: url('${first.src}')">
+      <img src="${first.src}" loading="lazy">
+  </div>
+`;
+    }
+
+    if (first.type === 'video') {
+        mediaHtml = `
+  <div class="vk-media video"
+       data-index="${vkMediaList.length}"
+       style="--bg: url('${first.preview}')">
+      <img src="${first.preview}">
+      <div class="play-icon">▶</div>
+  </div>
+`;
+    }
+
+    vkMediaList.push(media);
+}
+
+
+            article.innerHTML = `
+                <div class="vk-post-inner">
+                    ${mediaHtml}
+
+                    <div class="vk-content">
+                        <div class="vk-date">${formatDate(post.date)}</div>
+
+                        ${post.text ? `
+                            <div class="vk-text">${linkify(post.text).replace(/\n/g, '<br>')}</div>
+                            <div class="vk-more">Читать далее</div>
+                        ` : ''}
+
+                        <div class="vk-stats">
+                            ❤️ ${post.likes?.count || 0}
+                            👁 ${post.views?.count || 0}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            feed.appendChild(article);
+            const mediaBlock = article.querySelector('.vk-media');
+if (mediaBlock) {
+    mediaBlock.style.cursor = 'pointer';
+
+    mediaBlock.onclick = () => {
+        mediaList = vkMediaList[mediaBlock.dataset.index];
+        if (!mediaList || !mediaList.length) return;
+
+        currentIndex = 0;
+        openViewer(0);
+    };
+}
+
+
+
+
+            const text = article.querySelector('.vk-text');
+            const more = article.querySelector('.vk-more');
+
+            if (text && more) {
+                requestAnimationFrame(() => {
+                    if (text.scrollHeight <= text.clientHeight + 1) {
+                        more.remove();
+                    } else {
+                        more.onclick = () => {
+                            const expanded = text.classList.toggle('expanded');
+                            more.textContent = expanded ? 'Свернуть' : 'Читать далее';
+                        };
+                    }
+                });
+            }
+        });
+    });
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    loadVkFeed(); // первый запуск
+
+    setInterval(() => {
+        loadVkFeed(); // автообновление
+    }, 300000); // 5 минут
+});
+</script>
+
+</body>
+</html>
